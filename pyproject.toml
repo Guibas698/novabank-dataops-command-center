@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "novabank-dataops-command-center"
+version = "0.1.0"
+description = "Centro de Comando DataOps do NovaBank: Pipelines Corporativos (DRE/ERP), Data Contracts (ODCS), Data Chaos Monkey, RCA por Linhagem, Auto-Remediação e Postmortems."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Guibas698" }]
+dependencies = ["pyyaml>=6.0"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "ruff>=0.5"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

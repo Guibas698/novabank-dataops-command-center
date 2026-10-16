@@ -1,0 +1,7 @@
+services:
+  dataops-command-center:
+    build: .
+    container_name: novabank-dataops-command-center
+    ports:
+      - "8000:8000"
+    profiles: ["lite", "full"]
